@@ -20,11 +20,11 @@ The foundation of this platform is **Clean Architecture**. This choice was delib
 -   **Maintainability:** The layered structure allows new features to be added as self-contained modules, making the system easier to manage and scale.
 
 The solution is structured as follows:
--   `AI-Mock.Api`
--   `AI-Mock.Application`
--   `AI-Mock.Infrastructure`
--   `AI-Mock.Domain`
--   `AI-Mock.Tests`
+-   `ApiAiMock`
+-   `ApiAiMock.Application`
+-   `ApiAiMock.Infrastructure`
+-   `ApiAiMock.Domain`
+-   `ApiAiMock.Tests`
 
 ---
 
@@ -50,12 +50,12 @@ The solution is structured as follows:
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/your-username/AI-Mock.git](https://github.com/your-username/AI-Mock.git)
-    cd AI-Mock
+    cd Api-Ai-Mock
     ```
 2.  **Configure secrets:** This project uses the `.NET Secret Manager` for local development.
     -   Navigate to the API project directory:
         ```bash
-        cd AI-Mock.Api
+        cd Api-Ai-Mock
         ```
     -   Initialize user secrets:
         ```bash
@@ -69,7 +69,7 @@ The solution is structured as follows:
         ```
 3.  **Run the application:**
     ```bash
-    dotnet run --project AI-Mock.Api
+    dotnet run --project ApiAiMock
     ```
 The API will be available at `https://localhost:7123`. You can access the Swagger UI at `https://localhost:7123/swagger`.
 

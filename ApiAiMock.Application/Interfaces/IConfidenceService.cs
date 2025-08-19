@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using ApiAiMock.Domain.Entities;
+using ApiAiMock.Models;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace ApiAiMock.Application.Interfaces
 {
-    internal interface IConfidenceService
+    public interface IConfidenceService
     {
+        Task ProcessFrameAsync(string sessionId, Stream frameStream);
+        Task ProcessAudioAsync(string sessionId, Stream audioStream);
+        Task<ConfidenceReportDto> GetConfidenceReportAsync(string sessionId);
     }
 }
