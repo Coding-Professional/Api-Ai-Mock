@@ -1,6 +1,37 @@
-@ApiAiMock_HostAddress = http://localhost:5076
+@ApiAiMock_HostAddress = https://localhost:7127
 
-GET {{ApiAiMock_HostAddress}}/weatherforecast/
+### Confidence Analysis - Health Check
+GET {{ApiAiMock_HostAddress}}/api/analysis
 Accept: application/json
+
+###
+
+### Interview API - Get Status
+GET {{ApiAiMock_HostAddress}}/api/InterviewAPI/status
+Accept: application/json
+
+###
+
+### Interview API - Start Session
+POST {{ApiAiMock_HostAddress}}/api/InterviewAPI/start
+Content-Type: application/json
+
+{
+  "candidateName": "John Doe",
+  "position": "Software Developer",
+  "interviewType": "Technical"
+}
+
+###
+
+### Interview API - End Session
+POST {{ApiAiMock_HostAddress}}/api/InterviewAPI/end
+Content-Type: application/json
+
+{
+  "sessionId": "12345678-1234-1234-1234-123456789012",
+  "feedback": "Good interview, candidate showed strong technical skills",
+  "rating": 8
+}
 
 ###
